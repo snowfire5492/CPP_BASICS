@@ -86,13 +86,54 @@ int main(){
 	cout << "cValue: " << cValue << endl;
 	cout << "cValue ASCII: " << (int)cValue << endl;
 
-	// wchar_t	// auto char ASCII value 
+	// wchar_t	// auto char ASCII value
 
 	wchar_t wValue = 'i';
 	cout << "wValue Ascii: " << wValue << endl;
 	cout << "wValue: " << (char)wValue << endl;
 
 
+	// if statement
+
+	string password = "abc";
+
+
+	cout << "enter you password > " << flush;
+
+	string input;
+	cin >> input;
+
+	if(input == password){
+		cout << "your password is: " << "'" << input << "'" << endl;
+	}else{
+		cout << "wrong password" << endl;
+	}
+
+	if(3 == 3){
+		cout << "true" << endl;
+	}
+
+
+	// comparing floats
+
+	float value1 = 1.1;
+
+	if(value1 == 1.1){						// does not work with == as floats are unpredictable
+
+		cout << "equals" << endl;
+	}else{
+		cout << "not equal" << endl;
+	}
+
+	cout << value1 << endl;
+	cout << setprecision(10) << value1 << endl;
+
+
+	if(value1 < 1.101 && value1 > 1.0){		// works this way
+		cout << "equals" << endl;
+	}else{
+		cout << "not equals" << endl;
+	}
 
 	return 0;
 }
